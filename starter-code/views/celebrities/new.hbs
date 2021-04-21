@@ -1,0 +1,24 @@
+<h2>A new Queen arise!</h2>
+<form action="/celebrities/new" method="POST">
+
+  {{!-- <label>Author</label> --}}
+  {{!-- <input type="text" name="author"> --}}
+  {{!-- --}}
+  <label>Name</label>
+  <input type="text" name="name"></textarea>
+
+  <select name="movie">
+    <option value="">Pick a movie</option>
+    {{#each allMovies}}
+    <option value={{id}}>{{title}}</option>
+    {{/each}}
+  </select>
+
+  <label>Occupation</label>
+  <input type="text" name="occupation">
+
+  <label>Catch phrase</label>
+  <input type="text" name="catchPhrase">
+
+  <button type="submit">Create</button>
+</form>
